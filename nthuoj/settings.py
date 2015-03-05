@@ -70,7 +70,7 @@ INI_PATH = os.path.join(BASE_DIR, 'nthuoj.ini')
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'expenses_db',
+        'NAME':'myapp_db',
         'USER':'root',
         'PASSWORD':'',
         'HOST':'127.0.0.1',
