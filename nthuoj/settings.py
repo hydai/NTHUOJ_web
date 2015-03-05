@@ -69,11 +69,13 @@ INI_PATH = os.path.join(BASE_DIR, 'nthuoj.ini')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': INI_PATH,
-        },
-    }
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'expenses_db',
+        'USER':'root',
+        'PASSWORD':'',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
+    },
 }
 
 # Custom User auth
