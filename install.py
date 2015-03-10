@@ -43,10 +43,11 @@ db_migrate()
 
 
 # Create super user
+'''
 ans = raw_input('Create super user?[Y/n] ')
 if ans == '' or ans == 'y' or ans == 'Y':
     django_manage('createsuperuser')
-
+'''
 # Install needed library & setup
 
 # django-axes

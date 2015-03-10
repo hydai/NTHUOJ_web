@@ -1,6 +1,7 @@
 test:
 	mysql -e 'create database IF NOT EXISTS myapp_db;' -uroot
 	mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';" -uroot
+	python install.py
 	python manage.py makemigrations
 	python manage.py migrate
 	python manage.py test
