@@ -125,7 +125,7 @@ class SubmissionDetail(models.Model):
     MLE = 'MLE'
     RE = 'RE'
     PE = 'PE'
-    VIRDECT_CHOICE = (
+    VERDICT_CHOICE = (
         (AC, 'Accepted'),
         (WA, 'Wrong Answer'),
         (TLE, 'Time Limit Exceeded'),
