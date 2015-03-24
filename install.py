@@ -34,13 +34,21 @@ if not os.path.isfile('nthuoj.ini'):
     host = raw_input('Mysql host: ')
     db = raw_input('Mysql database: ')
     user = raw_input('Please input your mysql user: ')
-    pwd = getpass.getpass()
+    #pwd = getpass.getpass()
+    if sys.stdin.isatty():
+        pwd = getpass.getpass()
+    else:
+        pwd = sys.stdin.readline().rstrip()
     write_ini_file(host, db, user, pwd)
 
 if not os.path.isfile('emailInfo.py'):
     # Setting emailInfo.py
     email_host = raw_input('Email host(gmail): ')
-    email_host_pwd = getpass.getpass('Email host\'s password : ')
+    #email_host_pwd = getpass.getpass('Email host\'s password : ')
+    if sys.stdin.isatty():
+        email_host_pwd = getpass.getpass()
+    else:
+        email_host_pwd = sys.stdin.readline().rstrip()
     write_email_file(email_host, email_host_pwd)
 
 # Database Migratinos
