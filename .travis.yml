@@ -6,10 +6,18 @@ python:
 install:
     - pip install --upgrade pip
     - pip install -r requirements.txt
-    - pip install pep8
+    - pip install pylint
+    - pip install pyflakes
+    #- pip install pep8
     - pip install https://github.com/dcramer/pyflakes/tarball/master
 before_script:
-    - "pep8 --exclude=migrations --ignore=E501,E225 ."
+    #- "pep8 --exclude=migrations --ignore=E501,E225 ."
     - pyflakes -x W .
+
+    for i in * ; do
+       if [ -d "$i" ]; then
+           pylint "$i"
+       fi
+    done
 script:
     - make test
