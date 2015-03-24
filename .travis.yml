@@ -12,7 +12,7 @@ install:
     - pip install https://github.com/dcramer/pyflakes/tarball/master
 before_script:
     #- "pep8 --exclude=migrations --ignore=E501,E225 ."
-    - pyflakes -x W .
-    - sh ./runPylint.sh
+    #- pyflakes -x W .
+    #- sh ./runPylint.sh
 script:
     - make test
