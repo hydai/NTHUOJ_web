@@ -25,6 +25,7 @@ SOFTWARE.
 
 import getpass
 import os.path
+import sys
 
 from func import *
 
