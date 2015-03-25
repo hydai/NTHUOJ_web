@@ -1,7 +1,7 @@
 127.0.0.1
 test_db
 root
-1234
+
 test@nthuoj.org
 1234
 y
