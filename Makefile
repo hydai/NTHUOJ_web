@@ -7,5 +7,5 @@ test:
 	python manage.py bower install
 	python manage.py makemigrations
 	python manage.py migrate
-	python manage.py createsuperuser
+	#python manage.py createsuperuser
 	python manage.py test
