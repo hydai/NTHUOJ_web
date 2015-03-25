@@ -1,4 +1,6 @@
 test:
+	mysql -e 'create database IF NOT EXISTS test_db;' -uroot
+	mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';" -uroot
 	python install.py < info.txt
 	cat emailInfo.py
 	cat nthuoj.ini
