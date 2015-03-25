@@ -5,6 +5,8 @@ test:
 	cat emailInfo.py
 	cat nthuoj.ini
 	python manage.py bower install
+	python manage.py syncdb --noinput
 	python manage.py makemigrations
 	python manage.py migrate
+	python manage.py createsuperuser
 	python manage.py test
