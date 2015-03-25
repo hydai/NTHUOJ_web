@@ -6,14 +6,11 @@ python:
 install:
     - pip install --upgrade pip
     - npm install -g bower
-    - pip install -r requirements.txt
+    - pip install -r ./travis-ci/requirements.txt
     - pip install pylint
     - pip install pyflakes
-    #- pip install pep8
-    - pip install https://github.com/dcramer/pyflakes/tarball/master
 before_script:
-    #- "pep8 --exclude=migrations --ignore=E501,E225 ."
-    #- pyflakes -x W .
-    #- sh ./runPylint.sh
+    - pyflakes -x W .
+    - sh ./travis-ci/runPylint.sh
 script:
-    - make test
+    - sh ./travis-ci/runTest.sh
